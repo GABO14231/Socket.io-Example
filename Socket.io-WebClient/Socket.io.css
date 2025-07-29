@@ -1,0 +1,75 @@
+:root {--DivHeight: 100px;}
+
+body
+{
+    background-color: #e3f2fd;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.SendMessage, .RecieveMessage
+{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid;
+    width: 300px;
+    height: var(--DivHeight);
+    margin-bottom: 10px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.SendMessage:empty {line-height: var(--DivHeight);}
+.SendMessage:not(:empty) {line-height: auto;}
+
+h1
+{
+    color: #1565c0;
+    text-align: center;
+}
+
+input
+{
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button
+{
+    display: flex;
+    height: 50px;
+    padding: 15px;
+    line-height: 50px;
+    background-color: #4A90E2;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    border-radius: 5px;
+    transition: 0.1s box-shadow;
+    margin: auto;
+}
+
+button:active
+{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    background-color: #357ABD;
+}
+
+button:hover
+{
+    transition: all 0.2s ease-in-out;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    color: white;
+    cursor: pointer;
+}
+
+.disconnectButton, .clearLogButton {display: inline-flex; margin: 0px}

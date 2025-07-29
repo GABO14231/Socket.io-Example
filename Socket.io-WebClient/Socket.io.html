@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Socket.io Client</title>
+        <link rel="stylesheet" href="Socket.io.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="socket.io.lib.js"></script>
+    </head>
+    <body>
+        <div class="loginScreen" style="display: flex; flex-direction: column; align-items: center">
+            <h1>Login</h1>
+            <input id="input1" class="serverAddressInput" type="text" placeholder="Server Address (e.g., localhost)"/>
+            <input id="input2" class="serverPortInput" type="text" placeholder="Port (e.g., 3000)"/>
+            <button class="connectButton">Connect</button>
+            <p class="loginStatus" style="color: blue"></p>
+        </div>
+        <div class="appScreen" style="display: none">
+            <h1>Send Message</h1>
+            <div class="SendMessage" contenteditable="true"></div>
+            <button class="sendMessageButton">Send Message</button>
+            <h1>Server log</h1>
+            <div class="RecieveMessage"></div>
+            <div style="display: flex; justify-content: center; gap: 10px">
+                <button class="clearLogButton">Clear Log</button>
+                <button class="disconnectButton">Disconnect</button>
+            </div>
+        </div>
+        <script src="Socket.io.js"></script>
+    </body>
+</html>
